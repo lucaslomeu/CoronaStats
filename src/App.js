@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+
+function fetchData() {
+  const url = 'https://covid19-brazil-api.now.sh/api/report/v1';
+
+  fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data.data[0]);
+      // document.getElementById('uf').innerHTML = data.data[0];
+    });
+}
+
+fetchData();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>COVID</h1>
+      <div className="estado">SP</div>
     </div>
   );
 }
