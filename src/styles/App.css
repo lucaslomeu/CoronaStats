@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #ef473a;
+  --secundary-color: #cb2d3e;
+  --death-color: #cb2d3e;
+  --refuses-color: #9fe6a0;
+  --suspect-color: #ffd56b;
+  --background-color: #1b1717;
+  --text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.covid-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: var(--text-color);
+}
+
+.covid-search {
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.covid-text {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.covid-input {
+  padding-left: 15px;
+  width: 300px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  background: var(--secundary-color); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secundary-color)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secundary-color)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+
+.covid-input:focus {
+  outline: none;
+}
+
+.covid-input::placeholder {
+  color: #fff;
+}
+
+footer {
+  margin: 70px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: var(--secundary-color);
+}

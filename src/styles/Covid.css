@@ -1,0 +1,68 @@
+@import url('./App.css');
+
+.covid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.covid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid var(--primary-color);
+  width: 900px;
+  cursor: pointer;
+}
+
+.covid {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  min-width: 300px;
+}
+
+.covid h1 {
+  font-size: 16px;
+  width: 200px;
+}
+
+.covid h1:hover {
+  color: var(--primary-color);
+}
+
+.state {
+  width: 200px;
+  text-align: left;
+}
+.cases {
+  width: 130px;
+  text-align: center;
+}
+.deaths {
+  width: 170px;
+  text-align: center;
+}
+
+.deaths:hover {
+  color: var(--death-color);
+}
+
+.refuses {
+  width: 170px;
+  text-align: center;
+}
+
+.refuses:hover {
+  color: var(--refuses-color);
+}
+
+.suspects {
+  width: 170px;
+  text-align: center;
+}
+
+.suspects:hover {
+  color: var(--suspect-color);
+}

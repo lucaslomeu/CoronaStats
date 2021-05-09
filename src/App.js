@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Covid from './components/Covid';
-import './App.css';
+import Footer from './components/Footer';
+import './styles/App.css';
 
 function App() {
   const [states, setStates] = useState([]);
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className="covid-app">
       <div className="covid-search">
-        <h1 className="covid-text">Procure o Estado:</h1>
+        <h1 className="covid-text">ESTATISTICAS COVID-19</h1>
         <form>
           <input
             type="text"
@@ -38,20 +39,19 @@ function App() {
         </form>
       </div>
 
-      <div className="covid-card">
-        {filteredStates.map((state) => {
-          return (
-            <Covid
-              key={state.uf}
-              state={state.state}
-              cases={state.cases}
-              deaths={state.deaths}
-              refuses={state.refuses}
-              suspects={state.suspects}
-            />
-          );
-        })}
-      </div>
+      {filteredStates.map((state) => {
+        return (
+          <Covid
+            key={state.uf}
+            state={state.state}
+            cases={state.cases}
+            deaths={state.deaths}
+            refuses={state.refuses}
+            suspects={state.suspects}
+          />
+        );
+      })}
+      <Footer />
     </div>
   );
 }
